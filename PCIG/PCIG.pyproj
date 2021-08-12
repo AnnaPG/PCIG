@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{cd222c28-b54e-4845-941a-92e28cce25e1}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId />
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <DjangoSettingsModule>pcig.settings</DjangoSettingsModule>
+    <Name>PCIG</Name>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\static\build\css\custom.css">
+      <Publish>False</Publish>
+    </Content>
+    <Content Include="app\static\build\css\togglebutton.css">
+      <Publish>False</Publish>
+    </Content>
+    <Content Include="app\static\build\js\data.js" />
+    <Content Include="app\static\build\js\graphs.js" />
+    <Content Include="app\static\build\js\site.js" />
+    <Content Include="app\static\cnapp_logo_subtitle.png" />
+    <Content Include="app\static\logo.png" />
+    <Content Include="app\static\logo1.PNG" />
+    <Content Include="app\static\logo2.png" />
+    <Content Include="app\static\logo2_bg.png" />
+    <Content Include="app\static\pcawg_landing.png" />
+    <Content Include="app\static\vendors\chartjs\Chart.BoxPlot.min.js" />
+    <Content Include="app\static\vendors\jquery\jquery-3.4.1.min.js" />
+    <Content Include="app\static\vendors\plotly\plotly-latest.min.js" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\base_site.html" />
+    <Content Include="app\templates\app\counter_tiles.html" />
+    <Content Include="app\templates\app\filters.html" />
+    <Content Include="app\templates\app\glossary.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\sources.html" />
+    <Content Include="app\templates\app\tab_correlations_G.html" />
+    <Content Include="app\templates\app\tab_correlations_IG.html" />
+    <Content Include="app\templates\app\tab_summary.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\apps.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="app\database.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\urls.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="pcig\database_settings.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pcig\settings.py" />
+    <Compile Include="pcig\urls.py" />
+    <Compile Include="pcig\wsgi.py" />
+    <Compile Include="pcig\__init__.py" />
+    <Compile Include="manage.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\migrations" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\build\" />
+    <Folder Include="app\static\build\css" />
+    <Folder Include="app\static\build\images" />
+    <Folder Include="app\static\build\js" />
+    <Folder Include="app\static\images" />
+    <Folder Include="app\static\vendors\" />
+    <Folder Include="app\static\vendors\chartjs\" />
+    <Folder Include="app\static\vendors\jquery\" />
+    <Folder Include="app\static\vendors\plotly\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app" />
+    <Folder Include="pcig\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,72 @@
+<!-- Define the counters of the header -->
+<div class="counter mt-3 mb-3">
+    <div class="counter_item">
+        <span><i class="fa fa-user"></i>  Samples</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_samples"></div>
+        <span class="green" id="header_samples_percentage"></span>
+    </div>
+    <div class="counter_separator"></div>
+    <div class="counter_item">
+        <span><i class="fas fa-calendar-alt"></i>  Average Age</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_avg_age"></div>
+        <span class="green" id="header_age_range"></span>
+    </div>
+    <div class="counter_separator"></div>
+    <div class="counter_item">
+        <span><i class="fa fa-venus"></i>  Females</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_gender_female"></div>
+        <span class="green" id="header_female_percentage"></span>
+    </div>
+    <div class="counter_separator"></div>
+    <div class="counter_item">
+        <span><i class="fa fa-mars"></i>  Males</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_gender_male"></div>
+        <span class="green" id="header_male_percentage"></span>
+    </div>
+    <div class="counter_separator"></div>
+    <div class="counter_item">
+        <span><i class="fa fa-dna"></i>  Samples EXP</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_samples_exp"></div>
+        <span class="green" id="header_exp_percentage"></span>
+    </div>
+    <div class="counter_separator"></div>
+    <div class="counter_item">
+        <span><i class="fa fa-chart-area"></i>  Samples CNA</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_samples_cna"></div>
+        <span class="green" id="header_cna_percentage"></span>
+    </div>
+    <div class="counter_separator"></div>
+    <div class="counter_item">
+        <span><i class="fa fa-chart-area"></i>  Samples SV</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_samples_sv"></div>
+        <span class="green" id="header_sv_percentage"></span>
+    </div>
+    <div class="counter_separator"></div>
+    <div class="counter_item">
+        <span><i class="fa fa-chart-area"></i>  Samples Number of mutations</span>
+        <div class="fa-2x counter_loading_spinner"><i class="fas fa-spinner fa-spin"></i></div>
+        <div class="count_middle" id="header_samples_tmb"></div>
+        <span class="green" id="header_tmb_percentage"></span>
+    </div>
+
+    <div class="col">
+        <div class="row ml-5">
+            <!-- Download button -->
+            <button id="btn-download" type="button" class="btn btn-sm" style="display: none;"><i id="btn-download-icon" class="fas fa-download"></i>  Download data</button>
+        </div>
+        <div class="row ml-2 mt-4">
+            <!-- Indels switch -->
+            <div class="custom-control custom-switch" style="display: none;" id="div-indels">
+                <input type="checkbox" class="custom-control-input" id="indels">
+                <label class="custom-control-label" for="indels"> Number of mutations indel cases only</label>
+            </div>
+        </div>
+    </div>
+</div>

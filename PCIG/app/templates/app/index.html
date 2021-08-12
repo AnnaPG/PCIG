@@ -1,0 +1,299 @@
+{% extends "app/base_site.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+    {% include "app/filters.html" %}
+    {% include "app/counter_tiles.html" %}
+    <div class="chart_box mt-1" id="home_chart">
+        <div class="row chart_box_header">
+            <div class="col">
+                <h2>Datasets (47) - From 40 different cancer types</h2>
+            </div>
+        </div>
+        <div class="row mt-3 mb-5">
+            <div class="col">
+                <div id ="cancerTypes"></div>
+            </div>
+        </div>
+        <!-- BCS across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>BCS across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_bcs" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li>Broad CNA Score<a href=glossary.html#bcs> (BCS)</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_BCS"></div>
+            </div>
+        </div>
+        <!-- FCS across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>FCS across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_fcs" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li>Focal CNA Score<a href=glossary.html#fcs> (FCS)</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_FCS"></div>
+            </div>
+        </div>
+        <!-- Immune Score across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>ESTIMATE Immune Score across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_estimate_immune" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li><a href=glossary.html#estimate_immune>ESTIMATE Immune Score</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_immune"></div>
+            </div>
+        </div>
+        <!-- Stromal Score across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>ESTIMATE Stromal Score across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_estimate_stromal" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li><a href=glossary.html#estimate_stromal>ESTIMATE Stromal Score</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_stromal"></div>
+            </div>
+        </div>
+        <!-- MHC across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>MHC across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_mhc" class="toggle" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li>MHC molecules<a href=glossary.html#mhc> (MHC)</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_MHC"></div>
+            </div>
+        </div>
+        <!-- CP across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>CP across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_cp" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li>Immunomodulators<a href=glossary.html#cp> (CP)</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_CP"></div>
+            </div>
+        </div>
+        <!-- EC across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>EC across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_ec" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li>Effector cells<a href=glossary.html#ec> (EC)</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_EC"></div>
+            </div>
+        </div>
+        <!-- SC across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>SC across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_sc" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li>Suppressor cells<a href=glossary.html#sc> (SC)</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_SC"></div>
+            </div>
+        </div>
+        <!-- Chemokine Average across all cancer types -->
+        <div class="row chart_box_header mt-4">
+            <div class="col-auto">
+                <h2>Chemokine Average across all cancer types</h2>
+            </div>
+            <div class="col">
+                <div class="switch_container">
+                    <label class="switch">
+                        <input type="checkbox" id="tgl_chemokine" class="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Sort</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                    title="Additional information"
+                    data-content="<ul><li><a href=glossary.html#chemokine> Chemokine average</a></li></ul>">
+                    <span><i class="far fa-question-circle fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id ="box_general_chemokine_avg"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="cancer_details_nav" style="display: none;">
+        <!-- Tabs of each cancer type page-->
+        <nav class="content_nav">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">            
+            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-summary" role="tab">Summary</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#nav-correlations_g" role="tab">Genomics</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#nav-correlations_ig" role="tab">Immuno-Genomics</a>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-summary" role="tabpanel">
+                {% include "app/tab_summary.html" %}
+            </div>
+            <div class="tab-pane fade" id="nav-correlations_g" role="tabpanel">
+                {% include "app/tab_correlations_G.html" %}
+            </div>
+            <div class="tab-pane fade" id="nav-correlations_ig" role="tabpanel">
+                {% include "app/tab_correlations_IG.html" %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block javascripts %}
+{{ block.super}}
+    <script>
+        // Upon startup load the counters
+        UpdateCounters();
+        // Update general boxplots
+        UpdateBoxplotsGeneral();
+        // Update cancer types frequency graph
+        UpdateCancerTypesFrequency();
+    </script>
+{% endblock javascripts %}

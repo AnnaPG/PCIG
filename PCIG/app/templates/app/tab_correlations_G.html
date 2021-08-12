@@ -1,0 +1,98 @@
+<div class="chart_box">
+    <div class="row">
+        <!-- Side navigation list -->
+        <div class="col-2">
+            <div id="list-sections" class="list-group">
+                <a class="list-group-item list-group-item-action" href="#list-item-g-1">CNA scores vs Number of mutations</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-g-2">CNA scores vs Chromothripsis</a>
+                <!--<a class="list-group-item list-group-item-action" href="#list-item-g-3">CNA vs Ploidy</a>-->
+            </div>
+        </div>
+        <!-- Contents -->
+        <div data-spy="scroll" data-target="#list-sections" class="col-10">
+
+            <!-- TMB vs CNA -->
+            <div class="row chart_box_header mt-5">
+                <div class="col">
+                    <h2 id="list-item-g-1">CNA scores vs Number of mutations</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>Copy Number Alterations <a href=glossary.html#cna>(CNA)</a> <ul> <li>Scores: <a href=glossary.html#bcs>BCS</a>, <a href=glossary.html#fcs>FCS</a></li> </ul> </li> <li><a href=glossary.html#tmb>Number of mutations </a> </li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div id="bcs_tmb"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_bcs_tmb"></p>
+                    <p class="spearman" id="cor_bcs_tmb"></p>
+                </div>
+                <div class="col-6">
+                    <div id="fcs_tmb"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_fcs_tmb"></p>
+                    <p class="spearman" id="cor_fcs_tmb"></p>
+                </div>
+            </div>
+
+            <!-- CNA vs CTH -->
+            <div class="row chart_box_header mt-5">
+                <div class="col">
+                    <h2 id="list-item-g-2">CNA scores vs Chromothripsis</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>Copy Number Alterations <a href=glossary.html#cna>(CNA)</a> <ul> <li>Scores: <a href=glossary.html#bcs>BCS</a>, <a href=glossary.html#fcs>FCS</a></li> </ul> </li> <li>Chromothripsis <a href=glossary.html#cth>(CTH)</a> </li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id="bcs_cth"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class="spearman" id="pvalue_wilcoxon_cth_bcs"></p>
+                </div>
+                <div class="col-6 d-inline">
+                    <div id="fcs_cth"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class="spearman" id="pvalue_wilcoxon_cth_fcs"></p>
+                </div>
+            </div>
+
+            <!-- Relation betweeen number of CNA's and ploidy -->
+            <!--
+            <div class="row chart_box_header mt-5">
+                <div class="col">
+                    <h2 id="list-item-g-3">Relation betweeen number of CNA's and ploidys</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>Copy Number Alterations <a href=glossary.html#cna>(CNA)</a> <ul> <li>Scores: <a href=glossary.html#bcs>BCS</a>, <a href=glossary.html#fcs>FCS</a></li> </ul> </li> <li>Ploidy <a href=glossary.html#ploidy></a> </li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div id="ncna_ploidy"></div>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </div>
+</div>
+
+<button onclick="topFunction()" class="btn-gotop" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>

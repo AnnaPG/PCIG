@@ -1,0 +1,364 @@
+
+
+<div class="chart_box">
+    <div id="data_IG_not_available"></div>
+    <div class="row" id="correlations_IG">
+        <!-- Side navigation list -->
+        <div class="col-2">
+            <div id="list-sections" class="list-group">
+                <a class="list-group-item list-group-item-action" href="#list-item-ig-1">ESTIMATE scores vs CNA scores</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-ig-2">ESTIMATE scores vs Number of mutations</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-ig-3">Immunophenoscore vs CNA scores</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-ig-4">Immunophenoscore vs Number of mutations</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-ig-5">ESTIMATE scores vs 6q-HLA del</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-ig-6">Immunophenoscore vs 6q-HLA del</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-ig-7">12-Chemokine signature AVG vs CNA scores</a>
+            </div>
+        </div>
+        <!-- Contents -->
+        <div data-spy="scroll" data-target="#list-sections" class="col-10">
+
+
+            <!-- ESTIMATE Scores vs CNA-->
+            <div class="row chart_box_header mt-5" >
+                <div class="col">
+                    <h2 id="list-item-ig-1">ESTIMATE scores vs CNA scores</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>ESTIMATE scores <a href=glossary.html#estimate>(ESTIMATE)</a> <ul> <li>Scores: <a href=glossary.html#stromal>Stromal</a>, <a href=glossary.html#immune>Immune</a> </ul> </li><li>Copy Number Alterations <a href=glossary.html#cna>(CNA)</a> <ul> <li>Scores: <a href=glossary.html#bcs>BCS</a>, <a href=glossary.html#fcs>FCS</a></li> </ul> </li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id ="bcs_stromalscore"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_bcs_stromalscore"></p>
+                    <p class="spearman" id="cor_bcs_stromalscore"></p>
+                </div>
+                 <div class="col-6 d-inline">
+                    <div id ="fcs_stromalscore"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_fcs_stromalscore"></p>
+                    <p class="spearman" id="cor_fcs_stromalscore"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id ="bcs_immunescore"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_bcs_immunescore"></p>
+                    <p class="spearman" id="cor_bcs_immunescore"></p>
+                </div>
+                 <div class="col-6 d-inline">
+                    <div id ="fcs_immunescore"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_fcs_immunescore"></p>
+                    <p class="spearman" id="cor_fcs_immunescore"></p>
+                </div>
+            </div>
+            <!-- ESTIMATE Scores vs ML-->
+            <div class="row chart_box_header mt-5" >
+                <div class="col">
+                    <h2 id="list-item-ig-2">ESTIMATE scores vs Number of mutations</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>ESTIMATE scores <a href=glossary.html#estimate>(ESTIMATE)</a> <ul> <li>Scores: <a href=glossary.html#stromal>Stromal</a>, <a href=glossary.html#immune>Immune</a> </ul> </li><li><a href=glossary.html#tmb>Number of mutations </a></li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id ="tmb_stromalscore"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_tmb_stromalscore"></p>
+                    <p class="spearman" id="cor_tmb_stromalscore"></p>
+                </div>
+                <div class="col-6 d-inline">
+                    <div id ="tmb_immunescore"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_tmb_immunescore"></p>
+                    <p class="spearman" id="cor_tmb_immunescore"></p>
+                </div>
+            </div>
+
+            <!-- IPS vs CNA-->
+            <div class="row chart_box_header">
+                <div class="col">
+                    <h2 id="list-item-ig-3">Immunophenoscore vs CNA scores</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>Immunophenoscore <a href=glossary.html#ips>(IPS)</a> <ul> <li>Classes: <a href=glossary.html#mhc>MHC</a>, <a href=glossary.html#ec>EC</a>, <a href=glossary.html#cp>CP</a>, <a href=glossary.html#sc>SC</a></li> </ul> </li> <li>Copy Number Alterations <a href=glossary.html#cna>(CNA)</a> <ul> <li>Scores: <a href=glossary.html#bcs>BCS</a>, <a href=glossary.html#fcs>FCS</a></li> </ul> </li> </ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id="bcs_mhc"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_bcs_mhc"></p>
+                    <p class="spearman" id="cor_bcs_mhc"></p>
+                </div>
+                <div class="col-6">
+                    <div id="fcs_mhc"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_fcs_mhc"></p>
+                    <p class="spearman" id="cor_fcs_mhc"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div id="bcs_cp"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_bcs_cp"></p>
+                    <p class="spearman" id="cor_bcs_cp"></p>
+                </div>
+                <div class="col-6">
+                    <div id="fcs_cp"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_fcs_cp"></p>
+                    <p class="spearman" id="cor_fcs_cp"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div id="bcs_ec"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_bcs_ec"></p>
+                    <p class="spearman" id="cor_bcs_ec"></p>
+                </div>
+                <div class="col-6">
+                    <div id="fcs_ec"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_fcs_ec"></p>
+                    <p class="spearman" id="cor_fcs_ec"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div id="bcs_sc"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_bcs_sc"></p>
+                    <p class="spearman" id="cor_bcs_sc"></p>
+                </div>
+                <div class="col-6">
+                    <div id="fcs_sc"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_fcs_sc"></p>
+                    <p class="spearman" id="cor_fcs_sc"></p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col">
+                    <div id="toolbar-ips">
+                        <h2>Correlations summary</h2>
+                    </div>
+                    <table id="correlations_table_ips" data-filter-control="true" data-filter-show-clear="true"
+                           data-toolbar="#toolbar-ips"
+                           data-show-export="true" data-pagination="true" data-show-toggle="true"
+                           data-export-types="['csv', 'txt', 'excel', 'pdf']">
+                        <thead>
+                            <tr>
+                                <th rowspan="2" data-valign="top" data-filter-control="select" data-field="genes">IPS</th>
+                                <th colspan="2">BCS</th>
+                                <th colspan="2">FCS</th>
+                            </tr>
+                            <tr>
+                                <th data-field="bcs_pvalue">p-value</th>
+                                <th data-field="bcs_cor">cor. coef.</th>
+                                <th data-field="fcs_pvalue">p-value</th>
+                                <th data-field="fcs_cor">cor. coef.</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+            <!-- IPS vs TMB-->
+            <div class="row chart_box_header mt-5">
+                <div class="col">
+                    <h2 id="list-item-ig-4">Immunophenoscore vs Number of mutations</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>Immunophenoscore <a href=glossary.html#ips>(IPS)</a> <ul> <li>Classes: <a href=glossary.html#mhc>MHC</a>, <a href=glossary.html#ec>EC</a>, <a href=glossary.html#cp>CP</a>, <a href=glossary.html#sc>SC</a></li> </ul> </li> <li><a href=glossary.html#tmb>Number of mutations</a> </li> </ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id="mhc_tmb"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_mhc_tmb"></p>
+                    <p class="spearman" id="cor_mhc_tmb"></p>
+                </div>
+                <div class="col-6">
+                    <div id="cp_tmb"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_cp_tmb"></p>
+                    <p class="spearman" id="cor_cp_tmb"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div id="ec_tmb"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_ec_tmb"></p>
+                    <p class="spearman" id="cor_ec_tmb"></p>
+                </div>
+                <div class="col-6">
+                    <div id="sc_tmb"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class="spearman" id="pvalue_sc_tmb"></p>
+                    <p class="spearman" id="cor_sc_tmb"></p>
+                </div>
+            </div>
+
+
+            <!-- ESTIMATE vs 6q-HLA del-->
+            <div class="row chart_box_header mt-5" >
+                <div class="col">
+                    <h2 id="list-item-ig-5">ESTIMATE scores vs 6q-HLA del</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li>ESTIMATE scores <a href=glossary.html#estimate>(ESTIMATE)</a> <ul> <li>Scores: <a href=glossary.html#stromal>Stromal</a>, <a href=glossary.html#immune>Immune</a> </ul> </li> <li><a href=glossary.html#hla>6q-HLA del</a></li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+
+             <div class="row">
+                <div class="col-6 d-inline">
+                    <div id ="hla_stromalscore"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class ="spearman" id="pvalue_wilcoxon_stromal"></p>
+                </div>
+                 <div class="col-6 d-inline">
+                    <div id ="hla_immunescore"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class ="spearman" id="pvalue_wilcoxon_immune"></p>
+                </div>
+            </div>
+
+            <!-- IPS vs 6q-HLA del-->
+            <div class="row chart_box_header mt-5" >
+                <div class="col">
+                    <h2 id="list-item-ig-6">Immunophenoscore vs 6q-HLA del</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul>  <li>Immunophenoscore <a href=glossary.html#ips>(IPS)</a> <ul> <li>Classes: <a href=glossary.html#mhc>MHC</a>, <a href=glossary.html#ec>EC</a>, <a href=glossary.html#cp>CP</a>, <a href=glossary.html#sc>SC</a></li> </ul> </li> <li><a href=glossary.html#hla>6q-HLA del</a></li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id ="hla_mhc"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class ="spearman" id="pvalue_wilcoxon_mhc"></p>
+                </div>
+                 <div class="col-6 d-inline">
+                    <div id ="hla_ec"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class ="spearman" id="pvalue_wilcoxon_ec"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 d-inline">
+                    <div id ="hla_sc"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class ="spearman" id="pvalue_wilcoxon_sc"></p>
+                </div>
+                 <div class="col-6 d-inline">
+                    <div id ="hla_cp"></div>
+                    <h6><b>Mann-Whitney-Wilcoxon test:</b></h6>
+                    <p class ="spearman" id="pvalue_wilcoxon_cp"></p>
+                </div>
+            </div>
+
+            <!-- Chemokine AVG vs CNA-->
+            <div class="row chart_box_header mt-5" >
+                <div class="col">
+                    <h2 id="list-item-ig-7">12-Chemokine signature AVG vs CNA scores</h2>
+                </div>
+                <div class="col-auto">
+                    <a href="#" data-container="body" data-toggle="popover" data-placement="left" data-html="true"
+                       title="Additional information"
+                       data-content="<ul> <li><a href=glossary.html#hla>12-Chemokine signature</a></li> <li>Copy Number Alterations <a href=glossary.html#cna>(CNA)</a> <ul> <li>Scores: <a href=glossary.html#bcs>BCS</a>, <a href=glossary.html#fcs>FCS</a></li> </ul> </li></ul>">
+                        <span><i class="far fa-question-circle fa-2x"></i></span>
+                    </a>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-6 d-inline">
+                    <div id ="bcs_chemokine_avg"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_bcs_chemokine_avg"></p>
+                    <p class ="spearman" id="cor_bcs_chemokine_avg"></p>
+                </div>
+                 <div class="col-6 d-inline">
+                    <div id ="fcs_chemokine_avg"></div>
+                    <h6><b>Spearman test:</b></h6>
+                    <p class ="spearman" id="pvalue_fcs_chemokine_avg"></p>
+                    <p class ="spearman" id="cor_fcs_chemokine_avg"></p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col">
+                    <div id="toolbar-chemokine">
+                        <h2>Correlations summary</h2>
+                    </div>
+                    <table id="correlations_table_chemokine" data-filter-control="true" data-filter-show-clear="true"
+                           data-toolbar="#toolbar-chemokine"
+                           data-show-export="true" data-pagination="true" data-show-toggle="true"
+                           data-export-types="['csv', 'txt', 'excel', 'pdf']">
+                        <thead>
+                            <tr>
+                                <th rowspan="2" data-valign="top" data-filter-control="select" data-field="genes">Chemokine</th>
+                                <th colspan="2">BCS</th>
+                                <th colspan="2">FCS</th>
+                            </tr>
+                            <tr>
+                                <th data-field="bcs_pvalue">p-value</th>
+                                <th data-field="bcs_cor">cor. coef.</th>
+                                <th data-field="fcs_pvalue">p-value</th>
+                                <th data-field="fcs_cor">cor. coef.</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<button onclick="topFunction()" class="btn-gotop" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+

@@ -1,0 +1,180 @@
+/* Global settings */
+html, body {
+    height: 100%;
+    min-height: 100%;
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    overflow: auto;
+    background: #F7F7F7;
+}
+
+/* Main content container */
+#main {
+    overflow: auto;
+    padding: 20px;
+    background: #F7F7F7;
+}
+
+/* Side bar */
+#sidebar_wrapper {
+    height: 100%; /* 100% Full-height */
+    position: fixed; /* Stay in place */
+    width: 250px;
+    top: 0;
+    left: 0;
+    background-color: #2A3F54;
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.green {
+    color: #1ABB9C;
+}
+
+.red {
+    color: #DB504A;
+    font-size: 30px !important;
+}
+
+/* Top counter */
+.counter {
+    color: #73879C;
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+    .counter .counter_item span {
+        white-space: pre;
+    }
+    .counter .count_middle {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 47px;
+    }
+    .counter .counter_separator {
+        border-left: 2px solid #73879C;
+        margin-right: 15px;
+        margin-left: 15px;
+        width: 1px;
+    }
+
+/* Tabs navigation bar */
+.content_nav {
+    margin-top: 20px;
+}
+.tab-content {
+    border-right: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-item.nav-link {
+    color: #73879C;
+    font-weight: 300;   
+}
+
+/* Charts */
+.chart_box {
+    background: white;
+    padding: 40px;
+}
+    .chart_box h2 {
+        font-size: 24px;
+        margin: 10px;
+        color: #73879C;
+        font-weight: 400;
+    }
+    .chart_box h4 {
+        font-size: 18px;
+        margin: 20px 10px 10px 10px;
+        color: #73879C;
+        font-weight: 200;
+    }
+    .chart_box .spearman {
+        font-size: 14px;
+        color: #2A3F54;
+        margin: 0px 0px 0px 50px;
+        padding: 0px;
+    }
+
+.chart_box_header {
+    border-bottom: 3px solid #F7F7F7;
+}
+    .chart_box_header span {
+        color: #73879C;
+    }
+    .chart_box_header a[data-toggle="popover"]:hover span {
+        color: #1ABB9C
+    }
+
+.btn-user-guide {
+    color: #73879C;
+}
+
+    .btn-user-guide:hover span {
+        color: #1ABB9C
+    }
+
+#overlay {
+    background: #6B6B6B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#overlay_text {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: black;
+    font-size: 35px;
+}
+
+#btn-download {
+    background: #73879C;
+    border: #73879C;
+    color: white;
+    height: 40px;
+    margin-left: auto;
+}
+
+#div-indels {
+    margin-left: auto;
+}
+
+.btn-gotop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; /* Place the button at the bottom of the page */
+    right: 70px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1ABB9C; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+    .btn-gotop:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+    }
+
+.logos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}

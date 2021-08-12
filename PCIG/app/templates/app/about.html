@@ -1,0 +1,96 @@
+{% extends "app/base_site.html" %}
+
+{% block title %} About {% endblock title %}
+
+{% block content %}
+   <div class="chart_box mt-3">
+        <div class="row mt-3">
+        <p>Cancer genomes play an important role in defining tumor immune
+            features, and therefore may determine the response to
+            immunotherapy. Immune response to cancer is highly complex and
+            in many cases is modulated by genomic alterations and the organ of
+            origin. Immunogenomics aims at understanding the interplay
+            between the cancer genome and the immune system, with the
+            ultimate goal to identifying those tumors that may benefit of
+            immunotherapy.
+        </p>
+        <p>
+            PCIG uses immunogenomics to learn about the singularities of the
+            immune response to cancer. By analyzing whole-genome
+            sequencing data available for more than 2,800 samples spanning up
+            to 40 different cancer types from the PCAWG study, PCIG surveys to what extent somatic
+            mutations, copy number alterations and structural variants are
+            defining the spectrum of immune responses inferred from gene
+            expression signatures. The ultimate goal of PCIG is to provide
+            clinical research groups a user-friendly tool for visualizing the
+            relationships between cancer genomic traits and immune-related
+            phenotypes to better interpret tumor immunogenicity.</p>
+        </div>
+        <a href="https://github.com/AnnaPG/PCIG" target="_blank">
+            <i style="color: #343a40;" class="fab fa-lg fa-github"></i>
+        </a>
+        PCIG code is freely available at GitHub.
+        <div class="row chart_box_header mt-4">
+            <div class="col">
+                <h2>Cite PCIG</h2>
+            </div>
+        </div>
+        <div class="row chart_box_header mt-4">
+            <div class="col">
+                <h2>PCIG team</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 mt-5"></div>
+            <div class="col-2 mt-5" style="text-align:center">
+                <img src="../static/anna_pedrola.png" alt="anna_pedrola" width="150" height="150">
+            </div>            
+            <div class="col-2 mt-5" style="text-align:center">
+                <img src="../static/jordi_camps.png" alt="jordi_camps" width="150" height="150">
+            </div>          
+            <div class="col-2 mt-5" style="text-align:center">
+                <img src="../static/laia_bassaganyas.png" alt="laia_bassaganyas" width="150" height="150">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 mt-5"></div>
+            <div class="col-2 mt-2" style="text-align:center">
+                <p>
+                    <b>Anna Pedrola Gomez</b>
+                    <a href="https://www.linkedin.com/in/anna-pedrola-g%C3%B3mez-411a6111b/" target="_blank">
+                        <i style="color: #343a40;" class="fab fa-linkedin"></i>
+                    </a>
+                    <br />
+                    <small>annapedrolagomez@gmail.com</small>
+                </p>
+                <p>Vall d'Hebron Institute of Oncology - Biomedical Engineer</p>
+            </div>            
+            <div class="col-2 mt-2" style="text-align:center">
+                <p>
+                    <b>Jordi Camps</b>
+                    <br />
+                    <small>jcampspo@gmail.com</small>
+                </p>
+                <p>IDIBAPS group leader - Associate Professor at Universitat Autonoma de Barcelona</p>
+            </div>          
+            <div class="col-2 mt-2" style="text-align:center">
+                <p>
+                    <b>Laia Bassaganyas</b>
+                    <a href="https://www.linkedin.com/in/laia-bassaganyas-b181362a/" target="_blank">
+                        <i style="color: #343a40;" class="fab fa-linkedin"></i>
+                    </a>
+                    <br />
+                    <small>laia.bassaganyas@gmail.com</small>
+                </p>
+                <p>University of Cambridge - Research Associate</p>
+            </div>
+        </div>
+        <div class="logos-container">
+            <img src="../static/idibaps_logo.png" alt="idibaps_logo" width="200" height="120">
+            <img src="../static/vhio_logo.png" alt="vhio_logo" width="200" height="80">
+            <img src="../static/cost_logo.png" alt="cost_logo" width="200" height="80">
+        </div>
+
+
+    </div>
+{% endblock content %}

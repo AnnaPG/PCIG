@@ -1,0 +1,72 @@
+{% extends "app/base_site.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+    <div class="chart_box mt-3">
+        <div class="row chart_box_header">
+            <div class="col">
+                <h2>Glossary</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <ul>
+                    <li>
+                        <h6 id="mhc"><b>Copy Number Alterations (CNA)</b>:</h6>
+                        <p>Phenomenon of repetition or deletion of sections of the genome, defined with as equal or major of 1kb DNA segment (up to chromosome arm or whole chromosome). Its number of copies, differs of the reference genome (2N) and usually is normalized according to the sample ploidy.</p>
+                    </li>
+                    <li>
+                        <h6 id="mhc"><b>BCS</b>:</h6>
+                        <p>Specific CNA score that represents broad (>60% of the chromosome arm) CNA levels.</p>
+                    </li>
+                    <li>
+                        <h6 id="mhc"><b>FCS</b>:</h6>
+                        <p>Specific CNA score that represents focal (&lt;60% of the chromosome arm) CNA levels.</p>
+                    </li>
+                    <li>
+                        <h6 id="mhc"><b>Immunophenoscore (IPS)</b>:</h6>
+                        <p>Aggregate score based on the expression of genes or sets of representative genes that include four categories (MHC, CP, EC, SC) which reflects the immune activity of the tumors.</p>
+                    </li>
+                    <li>
+                        <h6 id="mhc"><b>MHC molecules (MHC)</b>:</h6>
+                        <p>Major histocompatibility complex encompasses a large group of highly polymorphic membrane glycoproteins, involved in the recognition of the antigen and more specifically in the presentation of the antigen.</p>
+                    </li>
+                    <li>
+                        <h6 id="ec"><b>Checkpoints/immunomodulators (CP)</b>:</h6>
+                        <p>Substance that stimulates or depresses the immune system.</p>
+                    </li>
+                    <li>
+                        <h6 id="cp"><b>Effector cells (EC)</b>:</h6>
+                        <p>Cells that perform a specific function to respond to a stimulus. In general, describes the set of cells of the immune system.</p>  
+                    </li>
+                    <li>              
+                        <h6 id="sc"><b>Suppressor cells (SC)</b>:</h6>
+                        <p>Type of immune cells that prevents the action of some other types of lymphocytes so that the immune system does not become overactive.</p>
+                    </li>
+                    <li>
+                        <h6 id="mhc"><b>Structural Variants (SV)</b>:</h6>
+                        <p>Genomic alterations, different in each individual that involve segments of DNA greater than 1kb. Specifically, balanced structural variations, in which there is no change in the genomic dose material, such as investments and translocations.</p>
+                    </li>
+                    <li>
+                        <h6 id="mhc"><b>Purity</b>:</h6>
+                        <p>Proportion of cancer cells in the admixture.</p>
+                    </li>
+                    <li>
+                        <h6 id="tmb"><b>Number of mutations</b>:</h6>
+                        <p>Total number of mutations per sample.</p>
+                    </li>
+                    <li>
+                        <h6 id="cth"><b>Chromotripsis (CTH)</b>:</h6>
+                        <p>Chromothripsis is characterized by massive genomic rearrangements usually associated with structural variants that are often generated in a single catastrophic event and localized to isolated chromosomal regions.</p>
+                    </li>
+                    <li>
+                        <h6 id="cth"><b>6q-HLA delection</b>:</h6>
+                        <p>In the human genome, the HLA gene complex resides on a 3 Mbp stretch within chromosome 6p21. Deletion affecting this chromosome band have been associated with lower capacity to antigen presentation.</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}

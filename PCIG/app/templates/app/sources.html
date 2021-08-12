@@ -1,0 +1,55 @@
+{% extends "app/base_site.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+    <div class="chart_box mt-3">
+        <div class="row chart_box_header">
+            <div class="col">
+                <h2>Sources</h2>
+            </div>
+        </div>
+         <div class="row mt-5">
+            <div class="col-2">
+                <img src="../static/pcawg_landing.png" alt="pcawg_logo" width="170" height="50">
+            </div>
+            <div class="col-10">
+                <a href="https://docs.icgc.org/pcawg/" target="_blank" style="color: #73879C;"><h5>PCAWG<i style="color: #343a40;" class="fas fa-external-link-alt fa-xs ml-2" title="Visit PCAWG"></i></h5></a>
+                <p>The PCAWG study is an international collaboration to identify common patterns of mutation in more than 2,800 cancer whole genomes from the International Cancer Genome Consortium. The project produced large amount data with many types including simple somatic mutations (SNVs, MNVs and small INDELs), large-scale somatic structural variations, copy number alterations, germline variations, RNA expression profiles, gene fusions, and phenotypic annotations etc. PCAWG data have been imported, processed and made available in the following four major online resources for download and exploration by the cancer researchers worldwide.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="../static/cnapp_logo_subtitle.png" alt="cnapp_logo" width="150" height="150">
+            </div>
+            <div class="col-10">
+                <a href="https://tools.idibaps.org/CNApp/" target="_blank" style="color: #73879C;"><h5>CNApp (a web-based application for integrative analysis of copy number alterations)<i style="color: #343a40;" class="fas fa-external-link-alt fa-xs ml-2" title="Visit CNApp"></i></h5></a>
+                <p>CNApp represents the first web-based application to perform a comprehensive and integrative analysis of CNAs in a user-friendly interface. The software uses segmented data from either array CGH, SNP-array, whole-exome sequencing or whole-genome sequencing to (i) define sample-specific CNA profiles, (ii) calculate broad and focal CNA scores (BCS and FCS, respectively); (iii) identify CNAs associated with clinical and/or molecular annotated variables; and, (iv) use machine learning-based prediction models to classify samples by multiple parameters, including those computed by the software.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-2">
+            </div>
+            <div class="col-10">
+                <a style="color: #73879C;"><h5>ESTIMATE</h5></a>
+                <p>Estimation of stromal and immune cells in malignant tumours using expression data (ESTIMATE), is a method that uses gene expression signatures to infer the fraction of stromal and immune cells in tumor samples (StromalScore and ImmuneScore, respectively). In addition, ESTIMATE can infer tumor purity in tumor tissue. Infiltrating stromal- and immune cell-related genes are identified by several gene filters.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-2">
+            </div>
+            <div class="col-10">
+                <a style="color: #73879C;"><h5>IMMNOPHENOSCORE</h5></a>
+                <p>Set of determinants of tumor immunogenicity, resulting in a quantification of the cellular characterization of the immune infiltrates. that represents a superior predictor of response to anti-cytotoxic immune checkpoints, such as CTLA-4 and PD-1 Blockers. Immunophenoscore is calculated as an aggregated score based on the expression of the representative genes or gene sets comprising four categories: MHC molecules, immunomodulators, effector cells (activated CD8+ T cells and CD4+ T cells, Tem CD8+ and Tem CD4+ cells), and suppressor cells (Tregs and MDSCs).</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-2">
+            </div>
+            <div class="col-10">
+                <a style="color: #73879C;"><h5>CHEMOKINES SIGNATURE</h5></a>
+                <p>A series of approaches are being developed using immune-related molecules, such as chemokines, to promote lymphocyte aggregation in tumors (also termed tertiary lymphoid structures), which could fuel antitumor immune reactions. To this end, local production of chemokines (eg, CXCL13) by lymphocytes or stromal cells recruits lymphoid cells to the site of inflammation. This 12-chemokine gene signature, notably containing CCL19, CCL21 and CXCL13, has been derived through correlation with inflammation and enhanced patient survival in several solid tumors (eg, colorectal, breast and melanoma). The 12-chemokine signature is based on gene expression data from thousands of tumor samples.</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
